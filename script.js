@@ -18,3 +18,9 @@ function filterFunction() {
     }
     }
 }
+
+function locationHashChanged(){
+    console.log("location hash has changed");
+}
+
+window.onhashchange = locationHashChanged;
