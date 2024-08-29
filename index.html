@@ -1,6 +1,8 @@
 <!doctype html>
 <html>
 <head>
+<link rel="stylesheet" href="index.css">
+<script src="script.js"></script>
 <title>fountainfinder</title>
 </head>
 <body>
@@ -25,17 +27,25 @@ public software to host your personal fountainfinder will be avaliable soon.</p>
 </p>
 
 <div class="dropdown">
-    <button onclick="myFunction()" class="dropbtn">Dropdown</button>
-    <div id="location" class="dropdown-content">
-      <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
+    <button onclick="locationDropdownOnClick()" class="dropbtn">Dropdown</button>
+    <div id="locationDropdown" class="dropdown-content">
+      <input type="text" placeholder="Search.." id="locationDropdownInput" onkeyup="filterFunction()">
       <a href="#SFAHS">S.F. Austin High School</a>
     </div>
 </div>
 
+<div id="map">
+  <script>
+    (g=>{var h,a,k,p="The Google Maps JavaScript API",c="google",l="importLibrary",q="__ib__",m=document,b=window;b=b[c]||(b[c]={});var d=b.maps||(b.maps={}),r=new Set,e=new URLSearchParams,u=()=>h||(h=new Promise(async(f,n)=>{await (a=m.createElement("script"));e.set("libraries",[...r]+"");for(k in g)e.set(k.replace(/[A-Z]/g,t=>"_"+t[0].toLowerCase()),g[k]);e.set("callback",c+".maps."+q);a.src=`https://maps.${c}apis.com/maps/api/js?`+e;d[q]=f;a.onerror=()=>h=n(Error(p+" could not load."));a.nonce=m.querySelector("script[nonce]")?.nonce||"";m.head.append(a)}));d[l]?console.warn(p+" only loads once. Ignoring:",g):d[l]=(f,...n)=>r.add(f)&&u().then(()=>d[l](f,...n))})({
+      key: "",
+      v: "weekly",
+    });
+  </script>
+</div>
 
-<script src="scripts/main.js">
-    
-</script>
+
+
+
 
 </body>
 </html>
