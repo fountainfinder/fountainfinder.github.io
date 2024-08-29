@@ -20,7 +20,8 @@ function filterFunction() {
 }
 
 function locationHashChanged(){
-    console.log("location hash has changed");
+    var hash = window.location.hash.substring(1);
+    document.getElementById("MapImage").src="../maps/".concat(hash,".png");
 }
 
 window.onhashchange = locationHashChanged;
